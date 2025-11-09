@@ -1,0 +1,9 @@
+streamlit
+tensorflow
+Pillow
+reportlab
+matplotlib
+scikit-learn
+gtts
+numpy
+pandas
