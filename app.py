@@ -609,11 +609,11 @@ elif page == "ℹ️ À propos du projet":
 
     2. **HIOMBO OTSHUDI Manassé** — Développeur Backend  
 
-    3. **MIKOBI MIKOBI Mavie** — Ingénieure Logiciel  
+    3. **MIKOBI MIKOBI Mavie** — Ingénieur Logiciel  
 
     4. **NKOMBE MAYEMBA Ange** — Analyste de Données  
 
-    5. **NKASHAMA KAPINGA Glodi** — Expert en Santé Publique
+    5. **NKASHAMA KAPINGA Glodi** — Expert en Robotique
 
     """)
 
