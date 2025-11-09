@@ -574,7 +574,7 @@ elif page == "📊 Données & Performances du modèle":
 # 🔹 PAGE 3 — À propos du projet
 
 # ==============================
-
+"""
 elif page == "ℹ️ À propos du projet":
 
     st.title("ℹ️ À propos du Projet MPOX Detector CD")
@@ -605,7 +605,7 @@ elif page == "ℹ️ À propos du projet":
 
     st.markdown("""
 
-    1. **KATALAY KAFUNDA Emmanuel** — Data Scientist & Développeur IA  
+    1. **KATALAY KAFUNDA Emmanuel** — Expert en Santé public 
 
     2. **HIOMBO OTSHUDI Manassé** — Développeur Backend  
 
@@ -613,7 +613,7 @@ elif page == "ℹ️ À propos du projet":
 
     4. **NKOMBE MAYEMBA Ange** — Analyste de Données  
 
-    5. **NKASHAMA KAPINGA Glodi** — Expert en Robotique
+    5. **NKASHAMA KAPINGA Glodi** — Data Scientist & Développeur IA  
 
     """)
 
@@ -634,6 +634,7 @@ elif page == "ℹ️ À propos du projet":
     - **gTTS (Google Text-to-Speech)**
 
     """)
+
 
 
 
