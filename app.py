@@ -71,7 +71,7 @@ st.set_page_config(
 # ==============================
 
 def prononcer_automatiquement(texte_a_prononcer: str, lang: str = 'fr'):
-    """Génère un fichier audio temporaire et affiche un bouton de lecture compatible mobile."""
+    """Génère un fichier audio temporaire et tente une lecture automatique, avec bouton de secours pour mobile."""
     nom_fichier_temp = "temp_auto_play.mp3"
     try:
         tts = gTTS(text=texte_a_prononcer, lang=lang)
@@ -81,6 +81,17 @@ def prononcer_automatiquement(texte_a_prononcer: str, lang: str = 'fr'):
             b64_data = base64.b64encode(f.read()).decode()
 
         audio_html = f"""
+        <script>
+          window.onload = function() {{
+            var audio = document.getElementById("audio_player");
+            var playPromise = audio.play();
+            if (playPromise !== undefined) {{
+              playPromise.catch(function(error) {{
+                console.log("Lecture automatique bloquée : " + error);
+              }});
+            }}
+          }};
+        </script>
         <button onclick="document.getElementById('audio_player').play()">🔊 Écouter</button>
         <audio id="audio_player" style="display:none;">
           <source src="data:audio/mp3;base64,{b64_data}" type="audio/mp3">
@@ -88,6 +99,7 @@ def prononcer_automatiquement(texte_a_prononcer: str, lang: str = 'fr'):
         """
 
         html(audio_html, height=60)
+        st.info("ℹ️ Sur mobile, appuyez sur le bouton 🔊 pour écouter le diagnostic vocal.")
 
     except Exception as e:
         st.warning(f"⚠️ Lecture audio non disponible : {e}")
@@ -95,6 +107,7 @@ def prononcer_automatiquement(texte_a_prononcer: str, lang: str = 'fr'):
     finally:
         if os.path.exists(nom_fichier_temp):
             os.remove(nom_fichier_temp)
+
 
 
 
