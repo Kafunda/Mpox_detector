@@ -574,7 +574,7 @@ elif page == "📊 Données & Performances du modèle":
 # 🔹 PAGE 3 — À propos du projet
 
 # ==============================
-"""
+
 elif page == "ℹ️ À propos du projet":
 
     st.title("ℹ️ À propos du Projet MPOX Detector CD")
