@@ -212,11 +212,11 @@ def load_model_mpox():
 
     """Charge le modèle de détection MPOX."""
 
-    model_path = 'best_model_mpox.h5'
+    model_path = 'best_model.keras'
 
     if not os.path.exists(model_path):
 
-        st.error("❌ Fichier du modèle non trouvé : best_model_mpox.h5")
+        st.error("❌ Fichier du modèle non trouvé : best_model_mpox.keras")
 
         st.stop()
 
